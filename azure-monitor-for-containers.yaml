@@ -1,0 +1,26 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: azuremonitor-containers
+  namespace: default
+  annotations:
+    flux.weave.works/automated: "false"
+    flux.weave.works/tag.chart-image: semver:~4.0
+spec:
+  releaseName: azuremonitor-containers
+  chart:
+    repository: https://kubernetes-charts-incubator.storage.googleapis.com/
+    name: azuremonitor-containers
+    version: 2.5.0
+  values:
+    image:
+      repository: bitnami/mongodb
+      tag: 4.0.3
+    usePassword: false
+    persistence:
+      enabled: false
+    securityContext:
+      enabled: true
+      fsGroup: 0
+      runAsUser: 0
