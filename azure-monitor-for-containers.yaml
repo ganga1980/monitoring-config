@@ -14,13 +14,6 @@ spec:
     name: azuremonitor-containers
     version: 2.5.0
   values:
-    image:
-      repository: bitnami/mongodb
-      tag: 4.0.3
-    usePassword: false
-    persistence:
-      enabled: false
-    securityContext:
-      enabled: true
-      fsGroup: 0
-      runAsUser: 0
+    omsagent.secret.wsid: e351b883-923e-4531-b862-07784e219b82
+    omsagent.secret.key: eP3yhDa+HGzaWyN41rnmFKlo+etd3IsDnJRr8qbC1DwdLk6e8stRVt+SqpE9ErWNpiAvYjRc2eMDT00wRF3WLQ==
+    omsagent.env.clusterId: /subscriptions/3da06598-90c6-4e49-b6a1-81913deb3f34/resourceGroups/gangams-arc-k8s-rg/providers/Microsoft.Kubernetes/connectedClusters/gangams-arc-k8s
