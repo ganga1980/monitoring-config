@@ -14,6 +14,9 @@ spec:
     name: azuremonitor-containers
     version: 2.5.0
   values:
-    omsagent.secret.wsid: 4eca127e-230d-4f08-8793-3c4289036900
-    omsagent.secret.key: <key_place_holder>
-    omsagent.env.clusterId: /subscriptions/09af8f6f-d4e5-4b9d-950b-b7aa2e897477/resourceGroups/gangams-akse-arc-test-rg/providers/Microsoft.Kubernetes/connectedClusters/gangams-akse-arc-test
+    omsagent:
+      secret:
+        wsid: 4eca127e-230d-4f08-8793-3c4289036900
+        key: <key_place_holder>
+      env:
+        clusterId: /subscriptions/09af8f6f-d4e5-4b9d-950b-b7aa2e897477/resourceGroups/gangams-akse-arc-test-rg/providers/Microsoft.Kubernetes/connectedClusters/gangams-akse-arc-test
